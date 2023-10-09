@@ -1,40 +1,10 @@
 import './App.css';
 import React from 'react';
+import AddProduct from './component/AddProduct.js';
+import ProductList from './component/ProductList.js';
 
 const Title = (props) => {
   return (<h1>{props.children}</h1>);
-};
-
-const AddProduct = ({ next_img, now_img, prev_img, add_product }) => {
-  return (
-    <div id="AddProduct">
-      <form action="">
-        <img src={now_img} alt="keyboard" />
-        <input className="next_btn" type="button" value="<" onClick={prev_img}></input>
-        <input className="add_btn" type="submit" value="상품 추가" onClick={add_product}></input>
-        <input className="next_btn" type="button" value=">" onClick={next_img}></input><br />
-      </form>
-    </div>
-  );
-};
-
-const Product = ({ src }) => {
-  return (
-    <div className="Product">
-      <img src={src} alt="keyboard"  />
-    </div>
-  );
-};
-
-const ProductList = ({ product }) => {
-  let key = Date.now();
-  return(
-    <div id="ProductList">
-      {product.map(item => {
-        return <Product src={item} key={key++}/>;
-      })}
-    </div>
-  );
 };
 
 const jsonLocal = {
