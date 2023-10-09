@@ -1,4 +1,4 @@
-import Product from './component/Product.js';
+import Product from './Product.js';
 
 const ProductList = ({ product }) => {
   let key = Date.now();
