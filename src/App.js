@@ -15,7 +15,7 @@ const jsonLocal = {
 };
 
 function App() {
-  const img_list = ['./img/1.jpg', './img/2.png', './img/3.jpg', './img/4.jpg', './img/5.png', './img/6.jpg', './img/7.jpg'];
+  const img_list = ['./public/img/1.jpg', './public/img/2.png', './public/img/3.jpg', './public/img/4.jpg', './public/img/5.png', './public/img/6.jpg', './public/img/7.jpg'];
   const [now_img, setNow_img] = React.useState(img_list[0]);
   const [product, setProduct] = React.useState(() => {
     return jsonLocal.getItem('product') || [];
